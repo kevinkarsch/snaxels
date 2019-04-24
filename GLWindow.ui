@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GLWindowUI</class>
+ <widget class="QMainWindow" name="GLWindowUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1090</width>
+    <height>788</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1090</width>
+    <height>788</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1090</width>
+    <height>788</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="GLWidget" name="glWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>536</width>
+      <height>431</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="SVGWidget" name="svgWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>551</x>
+      <y>9</y>
+      <width>535</width>
+      <height>492</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="recordButton">
+    <property name="geometry">
+     <rect>
+      <x>464</x>
+      <y>450</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: red</string>
+    </property>
+    <property name="text">
+     <string>Record
+Animation</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="defsText">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>525</y>
+      <width>536</width>
+      <height>216</height>
+     </rect>
+    </property>
+    <property name="lineWrapMode">
+     <enum>QPlainTextEdit::NoWrap</enum>
+    </property>
+    <property name="plainText">
+     <string>&lt;linearGradient id=&quot;lingrad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;0%&quot; y2=&quot;100%&quot;&gt;
+	&lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(255,0,0);stop-opacity:1&quot;/&gt;
+	&lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(255,255,0);stop-opacity:1&quot;/&gt;
+&lt;/linearGradient&gt;
+
+&lt;radialGradient id=&quot;radgrad&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50%&quot; fx=&quot;50%&quot; fy=&quot;50%&quot;&gt;
+	&lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(200,200,200); stop-opacity:0&quot;/&gt;
+	&lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(0,255,255); stop-opacity:1&quot;/&gt;
+&lt;/radialGradient&gt;
+
+&lt;pattern id=&quot;scales&quot; patternUnits=&quot;userSpaceOnUse&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;25&quot; height=&quot;25&quot;&gt;
+	&lt;g style=&quot;fill:none; stroke:url(#radgrad); stroke-width:1&quot;&gt;
+		&lt;path d=&quot;M0 0 C12,12 20,24 0,24&quot;/&gt;
+	&lt;/g&gt;
+&lt;/pattern&gt;
+
+&lt;pattern id=&quot;hatch&quot; patternUnits=&quot;userSpaceOnUse&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;25&quot; height=&quot;25&quot;&gt;
+	&lt;g style=&quot;fill:none; stroke:black; stroke-width:1&quot;&gt;
+		&lt;path d=&quot;M0 0 L12,12 L0,24&quot;/&gt;
+	&lt;/g&gt;
+&lt;/pattern&gt;
+
+&lt;marker id=&quot;marker&quot; viewBox=&quot;0 0 20 20&quot; refX=&quot;0&quot; refY=&quot;0&quot; markerWidth=&quot;4&quot; markerHeight=&quot;4&quot; stroke=&quot;blue&quot; stroke-width=&quot;2&quot; fill=&quot;none&quot; orient=&quot;auto&quot;&gt;
+	&lt;circle cx=&quot;10&quot; cy=&quot;10&quot; r=&quot;10&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot;/&gt;
+&lt;/marker&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="cssText">
+    <property name="geometry">
+     <rect>
+      <x>273</x>
+      <y>525</y>
+      <width>271</width>
+      <height>216</height>
+     </rect>
+    </property>
+    <property name="lineWrapMode">
+     <enum>QPlainTextEdit::NoWrap</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>505</y>
+      <width>536</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Definitions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>505</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>CSS</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="frameSlider">
+    <property name="geometry">
+     <rect>
+      <x>559</x>
+      <y>480</y>
+      <width>516</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBelow</enum>
+    </property>
+    <property name="tickInterval">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QListView" name="depthList">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>525</y>
+      <width>261</width>
+      <height>216</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>505</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Depth ordering</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1090</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave_SVG_frame"/>
+    <addaction name="actionSave_GL_frame"/>
+    <addaction name="actionExport_animation"/>
+   </widget>
+   <widget class="QMenu" name="menuSnaxels">
+    <property name="title">
+     <string>Snaxels</string>
+    </property>
+    <addaction name="actionAdd_front"/>
+    <addaction name="actionRemove_last_front"/>
+    <addaction name="separator"/>
+    <addaction name="actionToggle_deformation"/>
+    <addaction name="separator"/>
+    <addaction name="actionRender_fronts"/>
+    <addaction name="separator"/>
+    <addaction name="actionIncrease_goal_N_V"/>
+    <addaction name="actionDecrease_goal_N_V"/>
+   </widget>
+   <widget class="QMenu" name="menuExperiments">
+    <property name="title">
+     <string>Experiments</string>
+    </property>
+    <addaction name="actionExport_all_pose_projections"/>
+    <addaction name="actionRidge_mode"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSnaxels"/>
+   <addaction name="menuExperiments"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionAdd_front">
+   <property name="text">
+    <string>Add front</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionToggle_deformation">
+   <property name="text">
+    <string>Toggle deformation</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionRemove_last_front">
+   <property name="text">
+    <string>Remove last front</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="actionRender_fronts">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Render filled fronts</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionIncrease_goal_N_V">
+   <property name="text">
+    <string>Increase goal N*V</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
+  </action>
+  <action name="actionDecrease_goal_N_V">
+   <property name="text">
+    <string>Decrease goal N*V</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionExport_all_pose_projections">
+   <property name="text">
+    <string>Export all pose projections</string>
+   </property>
+  </action>
+  <action name="actionExport_animation">
+   <property name="text">
+    <string>Export animation</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionSave_GL_frame">
+   <property name="text">
+    <string>Save GL frame</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
+   </property>
+  </action>
+  <action name="actionRidge_mode">
+   <property name="text">
+    <string>Ridge mode</string>
+   </property>
+  </action>
+  <action name="actionSave_SVG_frame">
+   <property name="text">
+    <string>Save SVG frame</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QWidget</extends>
+   <header>GLWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SVGWidget</class>
+   <extends>QWidget</extends>
+   <header>SVGWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

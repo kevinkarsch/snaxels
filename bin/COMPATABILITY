@@ -1,0 +1,3 @@
+In Windows Vista or Windows 7, must change compatibility for full functionality!
+- Right click svg2swf.exe -> Compatibility tab
+- Check "Run this program in compatibility mode", select "Windows 95"
